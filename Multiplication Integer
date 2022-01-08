@@ -1,0 +1,46 @@
+package selfProgramming2;
+import java.util.Scanner;
+public class MultiplicationInteger {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Write a program in Java to display the multiplication table of a given integer.
+		
+		int x;
+		System.out.println("Please insert the number (Table to be calculated): ");
+		System.out.println("Number of terms: ");
+		Scanner scan = new Scanner (System.in);
+		x = scan.nextInt();
+		
+		for(int y = 0; y<x; y++)
+		{
+			System.out.println(x + " X " +y+ " = " + x*y);
+		}
+	}
+
+}
+
+Output:
+Please insert the number (Table to be calculated): 
+Number of terms: 
+5
+5 X 0 = 0
+5 X 1 = 5
+5 X 2 = 10
+5 X 3 = 15
+5 X 4 = 20
+
+Output 2:
+Please insert the number (Table to be calculated): 
+Number of terms: 
+9
+9 X 0 = 0
+9 X 1 = 9
+9 X 2 = 18
+9 X 3 = 27
+9 X 4 = 36
+9 X 5 = 45
+9 X 6 = 54
+9 X 7 = 63
+9 X 8 = 72
