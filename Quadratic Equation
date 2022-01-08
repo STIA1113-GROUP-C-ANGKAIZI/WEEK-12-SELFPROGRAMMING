@@ -1,0 +1,51 @@
+package selfProgramming2;
+import java.util.Scanner;
+public class QuadraticEquation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Write a Java program to solve quadratic equations (use if, else if and else).
+		//Test Data
+		//Input a: 1
+		//Input b: 5
+		//Input c: 2
+		
+		double a, b ,c;
+		
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Please input number A: ");
+		a = scan.nextInt();
+		System.out.println("Please input number B: ");
+		b = scan.nextInt();
+		System.out.println("Please input number A: ");
+		c = scan.nextInt();
+		
+		double answer = b * b - 4.0 * a * c; 
+		
+		if (answer>0.0) {
+			double a1 = (-b + Math.pow(answer, 0.5)) / (2.0 * a);
+			double a2 = (-b - Math.pow(answer, 0.5)) / (2.0 * a);
+			System.out.println("The roots are " + a1 + " and " + a2);
+		}
+		
+		else if (answer==0.0) {
+			double a1 = -b / (2.0 * a);
+			System.out.println("The roots is a1");
+		}
+		
+		else {
+			System.out.println("The equation has no real roots.");
+		}
+	}
+
+}
+
+Output:
+Please input number A: 
+1
+Please input number B: 
+5
+Please input number A: 
+2
+The roots are -0.4384471871911697 and -4.561552812808831
