@@ -1,0 +1,54 @@
+package myMethod;
+
+public class PassingParameter {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int mark[] = {40, 45, 85, 76, 54, 95, 65};
+		int sum, average, highest;
+		System.out.println("The number of subject " + mark.length);
+		printArray(mark);
+		
+		sum = sumMark(mark);
+		average = sum / mark.length;
+		System.out.println("The total of marks is : " + sum + " The average is : " + average);
+		highest = highest(mark);
+		System.out.println("The highest mark is " + highest);
+	}
+
+	public static void printArray(int [] mark) {
+		for (int i = 0; i < mark.length; i++) {
+			System.out.println(mark[i]);
+		}
+	}
+	
+	public static int sumMark(int [] mark) {
+		int total = 0;
+		for (int i = 0; i<mark.length; i++)
+			total = total + mark[i];
+		return total;
+	}
+	
+	public static int highest(int [] mark) {
+		int min = 0;
+		int max = 0;
+		
+		for (min = 1; min<mark.length; min++)
+			if (mark[max]< mark[min])
+				max = min;
+		return max;
+	}
+}
+
+output:
+The number of subject 7
+40
+45
+85
+76
+54
+95
+65
+The total of marks is : 460 The average is : 65
+The highest mark is 5
