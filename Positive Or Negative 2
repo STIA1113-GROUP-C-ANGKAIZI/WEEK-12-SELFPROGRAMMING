@@ -1,0 +1,82 @@
+package selfProgramming2;
+import java.util.Scanner;
+public class PositiveOrNegative2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Write a Java program that reads a floating-point number and prints "zero" if the number is zero. 
+		//Otherwise, print "positive" or "negative". Add "small" if the absolute value of the number is less than 1, 
+		//or "large" if it exceeds 1,000,000.
+		Scanner scan = new Scanner (System.in);
+		double a;
+		System.out.println("Please input a number: ");
+		a = scan.nextDouble();
+		
+		if (a > 0) 
+		{
+			if (a<1) {
+				System.out.println("It's a postive small number.");
+			}
+			else if (a > 1000000) {
+				System.out.println("It's a positive large number.");
+			}
+			else {
+				System.out.println("It's positive number");
+			}
+		}
+		
+		else if (a < 0)
+		{
+			if (Math.abs(a) < 1) {
+				System.out.println("It's a negative small number.");
+			}
+			else if (Math.abs(a) > 1000000) {
+				System.out.println("It's a negative large number.");
+			}
+			else {
+				System.out.println("It's a negative number.");
+			}
+		}
+		else 
+		{
+			System.out.println("The number is zero.");
+		}
+	}
+
+}
+
+Output 1:
+Please input a number: 
+0.3
+It's a postive small number.
+
+Output 2 :
+Please input a number: 
+2626
+It's positive number
+
+Output 3:
+Please input a number: 
+26262626
+It's a positive large number.
+
+Output 4:
+Please input a number: 
+-0.6
+It's a negative small number.
+
+Output 5:
+Please input a number: 
+-489
+It's a negative number.
+
+Output 6:
+Please input a number: 
+-4561597
+It's a negative large number.
+
+Output 7:
+Please input a number: 
+0
+The number is zero.
